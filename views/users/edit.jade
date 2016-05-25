@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+    h1.
+        User ID #{user._id}
+    form(action='/users/#{user._id}/edit',method='post',name='updateblob',enctype='application/x-www-form-urlencoded')
+        p First Name: 
+            input#inputName(type='text', value='#{user.firstName}', name='firstName')
+        p Last Name: 
+            input#inputName(type='text', value='#{user.lastName}', name='lastName')
+        p Gender: 
+            input#inputBadge(type='text', value='#{user.gender}', name='gender')
+        p DOB: 
+            input#inputDob(type='date', value='#{blobdob}', name='dob')
+        
+        p 
+            input(type='hidden',value='PUT',name='_method')
+        p 
+            button#btnSubmit(type='submit').
+                Update

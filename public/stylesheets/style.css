@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.page{
+	margin-top: 50px;
+	text-align: center;
+	font-size: 20px;
+}
+.head{
+	margin-top: 50px;
+}
+.id{
+	margin-top: 20px;
+}
+.errors{
+	color: red;
+}
+.error{
+	color: red;
+	margin-left: 100px;
+	font-size: 15px; 
+}
+.log{
+	margin-left: 150px;
+}
+.form-horizontal{
+	margin-top: 50px;
+}
+.logout{
+	margin-left: 600px;
+	margin-top: -30px;
+}
+.back{
+	margin-top: 20px;
+}

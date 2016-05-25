@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+	h1.
+		User ID #{user._id} 
+	p First Name: #{user.firstName}
+	p Last Name: #{user.lastName}
+	p Gender: #{user.gender}
+	p Date of Birth: #{blobdob}
+	p Date Created: #{user.meta.created_at}
+	p Date Created: #{user.meta.updated_at}
+
+  
+
+	form(action='/users/#{user._id}/delete',method='post',enctype='application/x-www-form-urlencoded')
+		input(type='hidden',value='DELETE',name='_method')
+		button(type='submit').
+			Delete

@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+    - if (errors){
+        ul
+            - each error, i in errors
+                li.errors 
+                    = error.msg
+    - }
+
+   
+
+    h1.
+        #{title}
+    form(name="loginForm",method="post",action="/users", id="loginForm", class="form-horizontal")
+        div.form-group.row
+            div.col-md-1
+                p FirstName:
+            div.col-md-4 
+                input(type="text", placeholder="Smith", name="firstName",class="form-control", id="firstName")
+        div.form-group.row
+            div.col-md-1
+                p LastName:
+            div.col-md-4 
+                input#lastName.required.form-control(type="text", placeholder="John", name="lastName")
+        div.form-group.row
+            div.col-md-1
+                p Gender:
+            div.col-md-4
+                input#gender.required.form-control(type="text", placeholder="male", name="gender")
+        div.form-group.row
+            div.col-md-1
+                p DOB: 
+            div.col-md-4
+                input#dob.required.form-control(type="date", placeholder="yy/mm/dd",name="dob")
+        div.form-group.row
+            div.col-md-1
+                        
+            div.col-md-4
+                button#submit.btn-info.form-control(type="submit", value="Submit") submit
+
+    

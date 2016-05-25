@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+
+    h1.
+        #{title}
+
+    h4.head
+        a(href="users/create") Create New User
+
+    p.logout
+        a(href="users/logout") Logout
+
+
+    - each user, i in users
+
+        p.id ID:#{user._id}
+        p#firstName.first First-name:#{user.firstName}
+        p.last Last-name :#{user.lastName}
+        p.gender Gender :#{user.gender}
+        p.dob DOB :#{user.dob}
+        p.created created-at :#{user.meta.created_at}
+        p.created Updated-at :#{user.meta.updated_at}
+            
+        a(href='/users/#{user._id}/edit') Edit |
+        a(href='/users/#{user._id}/delete') Delete |                     
+        a(href='/users/#{user._id}') Show |
+
+    p.page
+        - if (page > 0) {
+            a(href="?page=" + (page - 1)) Previous page
+            &nbsp;
+        - }
+
+        - if (! lastPage){
+            a(href="?page=" + (page + 1)) Next page
+        -}
+
+       

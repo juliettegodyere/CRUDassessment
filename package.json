@@ -1,0 +1,30 @@
+{
+  "name": "pmtask",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cookie-parser": "^1.3.5",
+    "dateformat": "^1.0.12",
+    "debug": "^2.2.0",
+    "ejs": "^2.4.1",
+    "everyauth": "^0.4.9",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "express-validator": "^2.20.4",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.5",
+    "moment": "^2.13.0",
+    "mongoose": "^4.4.13",
+    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-validator": "^1.2.4",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0",
+    "stylus": "^0.40.3"
+   
+
+  }
+}

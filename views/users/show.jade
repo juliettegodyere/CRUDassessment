@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	h1 User Profile
+	p id: #{user._id}
+	p First Name: #{user.firstName}
+	p Last Name: #{user.lastName}
+	p Gender: #{user.gender}
+	p Date of Birth: #{blobdob}
+	p Date Created: #{user.meta.created_at}
+	p Date Created: #{user.meta.updated_at}
+
+	p.back
+		a(href="/users") Back to Home
